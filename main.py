@@ -16,7 +16,7 @@ async def bible():
     # TODO: maybe one day include the testament
     search = request.args["search"]
 
-    verse = next((verse for verse in bible_verses if search in verse),
+    verse = next((verse for verse in bible_verses if search in verse.split()),
                  None)
 
     if verse is None:

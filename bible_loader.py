@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 def load_verses():
-    lines = []
+    lines: list[str] = []
 
     for p in Path("bible").glob("*.txt"):
         text = p.read_text()
